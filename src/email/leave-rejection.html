@@ -1,0 +1,24 @@
+<!-- emails/leave-rejection.html -->
+{{> header}}
+
+<div class="content">
+  <h2>Leave Rejected ❌</h2>
+
+  <p>Hi {{firstName}},</p>
+
+  <p>
+    Unfortunately, your leave request from
+    <b>{{formatDate fromDate}}</b> to <b>{{formatDate toDate}}</b>
+    has been rejected.
+  </p>
+
+  <div class="info-box" style="background:#fdecea;border-left:4px solid #dc3545;">
+    <p style="margin:0;"><strong>Reason:</strong> {{reason}}</p>
+  </div>
+
+  <p class="text-muted">
+    If you believe this was a mistake, please reach out to your reporting manager or HR.
+  </p>
+</div>
+
+{{> footer}}

@@ -1,0 +1,40 @@
+<div class="email-container">
+    {{> header}}
+    
+    <div class="content">
+        <div style="margin-bottom: 20px;">
+            {{#eq priority "high"}}
+            <span class="badge badge-high">High Priority</span>
+            {{/eq}}
+            {{#eq priority "medium"}}
+            <span class="badge badge-medium">Medium Priority</span>
+            {{/eq}}
+            {{#eq priority "low"}}
+            <span class="badge badge-low">Low Priority</span>
+            {{/eq}}
+        </div>
+        
+        <h2>📢 {{title}}</h2>
+        
+        <div style="margin: 20px 0;">
+            <p style="color: #666; font-size: 14px; margin: 0;">
+                <strong>From:</strong> {{author}}<br>
+                <strong>Date:</strong> {{formatDate date}}
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div style="line-height: 1.8; color: #333;">
+            {{{message}}}
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p class="text-muted">
+            This announcement has been sent to all employees. For questions, please contact your manager or HR department.
+        </p>
+    </div>
+    
+    {{> footer}}
+</div>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marriage Anniversary</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #702459 0%, #97266d 50%, #b83280 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px rgba(112, 36, 89, 0.4);
+    }
+    .header {
+      background: linear-gradient(135deg, #d53f8c 0%, #b83280 50%, #97266d 100%);
+      padding: 50px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '💕';
+      position: absolute;
+      font-size: 140px;
+      opacity: 0.08;
+      top: -40px;
+      left: -30px;
+    }
+    .hearts-row {
+      font-size: 32px;
+      letter-spacing: 8px;
+      margin-bottom: 15px;
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.15); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+    }
+    .rings-emoji {
+      font-size: 75px;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .header h1 {
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: rgba(255,255,255,0.92);
+      font-size: 17px;
+    }
+    .years-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #fbb6ce, #f687b3);
+      color: #702459;
+      font-size: 38px;
+      font-weight: 800;
+      padding: 15px 40px;
+      border-radius: 60px;
+      margin: 25px 0 15px;
+      box-shadow: 0 10px 30px rgba(214, 63, 140, 0.3);
+    }
+    .body {
+      padding: 50px 40px;
+      text-align: center;
+    }
+    .greeting {
+      font-size: 26px;
+      color: #2d3748;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .greeting span {
+      color: #b83280;
+    }
+    .message {
+      font-size: 17px;
+      color: #4a5568;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .love-card {
+      background: linear-gradient(135deg, #fff5f7 0%, #fed7e2 100%);
+      border-radius: 20px;
+      padding: 35px 30px;
+      margin: 30px 0;
+      position: relative;
+      border: 2px solid #fbb6ce;
+    }
+    .love-card::before {
+      content: '💐';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 36px;
+      background: #ffffff;
+      padding: 0 12px;
+      border-radius: 50%;
+    }
+    .love-card p {
+      font-size: 17px;
+      color: #702459;
+      font-style: italic;
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+    .anniversary-date {
+      display: inline-block;
+      background: #ffffff;
+      border: 2px solid #d53f8c;
+      color: #97266d;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+    .footer {
+      background: #702459;
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .footer p {
+      color: #fbb6ce;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .footer .company {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="hearts-row">💕 💖 💕</div>
+      <span class="rings-emoji">💍</span>
+      <h1>Happy Anniversary!</h1>
+      <p>Celebrating Your Beautiful Journey Together</p>
+      <div class="years-badge">{{years}} {{yearLabel}}</div>
+    </div>
+
+    <div class="body">
+      <div class="greeting">
+        Dear <span>{{firstName}} {{lastName}}</span>,
+      </div>
+
+      <p class="message">
+        On behalf of the entire <strong>{{companyName}}</strong> family, we wish
+        you and your beloved partner a very
+        <strong>Happy Wedding Anniversary!</strong> 💐
+      </p>
+
+      <div class="anniversary-date">
+        📅 {{anniversaryDate}} — {{years}} {{yearLabel}} of Togetherness
+      </div>
+
+      <div class="love-card">
+        <p>
+          "May your bond continue to grow stronger with each passing year.
+          Wishing you a lifetime of love, laughter, and endless happiness
+          together. Here's to many more beautiful years ahead!"
+        </p>
+      </div>
+
+      <p class="message">
+        We hope you both have a wonderful celebration filled with love and joy.
+        Thank you for sharing your special day with us! 🥂
+      </p>
+    </div>
+
+    <div class="footer">
+      <p class="company">{{companyName}}</p>
+      <p>© {{year}} {{companyName}}. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

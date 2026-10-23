@@ -1,0 +1,7 @@
+# Secrets
+.env
+.env.*
+src/config/google-credentials.json
+
+# Dependencies
+node_modules/

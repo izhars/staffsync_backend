@@ -1,0 +1,45 @@
+{{> header}}
+
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; color: #333;">
+  <h2 style="color: #4a5568; margin-bottom: 8px;">
+    {{#if isSingle}}
+      🎉 You received a regard today!
+    {{else}}
+      🎉 You received {{count}} regards today!
+    {{/if}}
+  </h2>
+
+  <p style="font-size: 16px; line-height: 1.6;">
+    Hi <strong>{{recipientFirstName}}</strong>, your colleagues sent you these messages:
+  </p>
+
+  {{#if items}}
+    {{#each items}}
+      <div style="border-left: 4px solid {{this.accent}}; background: #f7fafc; margin: 16px 0; padding: 12px 16px;">
+        <p style="margin: 0 0 6px 0; font-weight: bold; color: #2d3748;">
+          {{this.celebrationLabel}} — from {{this.senderName}}
+          {{#if this.senderDesignation}}
+            <span style="font-weight: normal; color: #718096;">({{this.senderDesignation}})</span>
+          {{/if}}
+        </p>
+        <p style="margin: 0; font-style: italic; color: #4a5568;">&ldquo;{{this.message}}&rdquo;</p>
+      </div>
+    {{/each}}
+  {{else}}
+    <p style="font-size: 16px; color: #718096;">
+      It looks like there are no regards to show right now — but we&rsquo;ll keep you posted!
+    </p>
+  {{/if}}
+
+  <p style="font-size: 14px; color: #718096; margin-top: 24px;">
+    You can reply to each colleague directly from the HRMS app.
+  </p>
+
+  <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 24px 0;" />
+
+  <p style="font-size: 12px; color: #a0aec0; text-align: center;">
+    Sent via <a href="{{appUrl}}" style="color: #4299e1;">HRMS</a> · {{year}}
+  </p>
+</div>
+
+{{> footer}}

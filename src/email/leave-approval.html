@@ -1,0 +1,26 @@
+{{> header}}
+
+<div class="content">
+  <h2>Leave Approved ✅</h2>
+
+  <p>Hi {{firstName}},</p>
+
+  <p>
+    Good news — your leave request from
+    <b>{{formatDate fromDate}}</b> to <b>{{formatDate toDate}}</b>
+    (<b>{{totalDays}}</b> day(s)) has been <b>approved</b> by {{approverName}}.
+  </p>
+
+  <div class="info-box" style="background:#e8f5e9;border-left:4px solid #28a745;">
+    <p style="margin:0;">
+      <strong>Leave Type:</strong> {{leaveType}}<br>
+      <strong>Approved On:</strong> {{formatDate approvedOn}}
+    </p>
+  </div>
+
+  <p class="text-muted">
+    Your attendance for these dates has been marked as On Leave. Enjoy your time off!
+  </p>
+</div>
+
+{{> footer}}
