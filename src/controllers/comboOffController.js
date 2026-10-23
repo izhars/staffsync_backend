@@ -5,7 +5,7 @@ const User = require("../models/User");
 const Holiday = require("../models/Holiday");
 const Leave = require("../models/Leave"); // moved to top-level
 
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const asyncHandler = require("../utils/asyncHandler");
 
 // ─────────────────────────────────────────────────────────────
